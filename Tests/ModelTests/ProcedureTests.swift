@@ -25,6 +25,10 @@ class ProcedureTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRProcedure {
 		return try SwiftFHIRProcedure(json: json)
 	}
+
+    func testResourceTypeIsProcedure() {
+        XCTAssertEqual(Procedure.resourceType, "Procedure")
+    }
 	
 	func testProcedure1() {
 		do {

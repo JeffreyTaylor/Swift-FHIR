@@ -25,6 +25,10 @@ class ObservationTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRObservation {
 		return try SwiftFHIRObservation(json: json)
 	}
+
+    func testResourceTypeIsObservation() {
+        XCTAssertEqual(Observation.resourceType, "Observation")
+    }
 	
 	func testObservation1() {
 		do {

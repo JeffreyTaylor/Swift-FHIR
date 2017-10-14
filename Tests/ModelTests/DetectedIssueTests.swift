@@ -25,6 +25,10 @@ class DetectedIssueTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRDetectedIssue {
 		return try SwiftFHIRDetectedIssue(json: json)
 	}
+
+    func testResourceTypeIsDetectedIssue() {
+        XCTAssertEqual(DetectedIssue.resourceType, "DetectedIssue")
+    }
 	
 	func testDetectedIssue1() {
 		do {

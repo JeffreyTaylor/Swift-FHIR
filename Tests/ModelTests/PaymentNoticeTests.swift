@@ -25,6 +25,10 @@ class PaymentNoticeTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRPaymentNotice {
 		return try SwiftFHIRPaymentNotice(json: json)
 	}
+
+    func testResourceTypeIsPaymentNotice() {
+        XCTAssertEqual(PaymentNotice.resourceType, "PaymentNotice")
+    }
 	
 	func testPaymentNotice1() {
 		do {

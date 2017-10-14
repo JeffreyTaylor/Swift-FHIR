@@ -25,6 +25,10 @@ class SupplyRequestTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRSupplyRequest {
 		return try SwiftFHIRSupplyRequest(json: json)
 	}
+
+    func testResourceTypeIsSupplyRequest() {
+        XCTAssertEqual(SupplyRequest.resourceType, "SupplyRequest")
+    }
 	
 	func testSupplyRequest1() {
 		do {

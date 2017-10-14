@@ -33,6 +33,10 @@ class ResourceTests: XCTestCase {
 			XCTAssertTrue(false, "Should not raise exception \(error) when containing perfectly fine patient into order")
 		}
 	}
+
+    func testResourceTypeIsResource() {        
+        XCTAssertEqual(Resource.resourceType, "Resource")
+    }
 	
 	func testContainingNoId() {
 		let patient = Patient()

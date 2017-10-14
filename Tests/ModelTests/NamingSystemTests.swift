@@ -25,6 +25,10 @@ class NamingSystemTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRNamingSystem {
 		return try SwiftFHIRNamingSystem(json: json)
 	}
+
+    func testResourceTypeIsNamingSystem() {
+        XCTAssertEqual(NamingSystem.resourceType, "NamingSystem")
+    }
 	
 	func testNamingSystem1() {
 		do {

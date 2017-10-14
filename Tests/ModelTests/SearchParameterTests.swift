@@ -25,6 +25,10 @@ class SearchParameterTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRSearchParameter {
 		return try SwiftFHIRSearchParameter(json: json)
 	}
+
+    func testResourceTypeIsSearchParameter() {
+        XCTAssertEqual(SearchParameter.resourceType, "SearchParameter")
+    }
 	
 	func testSearchParameter1() {
 		do {

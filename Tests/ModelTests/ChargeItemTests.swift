@@ -25,6 +25,10 @@ class ChargeItemTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRChargeItem {
 		return try SwiftFHIRChargeItem(json: json)
 	}
+
+    func testResourceTypeIsChargeItem() {
+        XCTAssertEqual(ChargeItem.resourceType, "ChargeItem")
+    }
 	
 	func testChargeItem1() {
 		do {

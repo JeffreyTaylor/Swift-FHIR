@@ -25,6 +25,10 @@ class LibraryTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRLibrary {
 		return try SwiftFHIRLibrary(json: json)
 	}
+
+    func testResourceTypeIsLibrary() {
+        XCTAssertEqual(Library.resourceType, "Library")
+    }
 	
 	func testLibrary1() {
 		do {

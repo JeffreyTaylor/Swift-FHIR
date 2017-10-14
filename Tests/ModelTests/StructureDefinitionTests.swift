@@ -25,6 +25,10 @@ class StructureDefinitionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRStructureDefinition {
 		return try SwiftFHIRStructureDefinition(json: json)
 	}
+
+    func testResourceTypeIsStructureDefinition() {
+        XCTAssertEqual(StructureDefinition.resourceType, "StructureDefinition")
+    }
 	
 	func testStructureDefinition1() {
 		do {

@@ -25,6 +25,10 @@ class SubscriptionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRSubscription {
 		return try SwiftFHIRSubscription(json: json)
 	}
+
+    func testResourceTypeIsSubscription() {
+        XCTAssertEqual(Subscription.resourceType, "Subscription")
+    }
 	
 	func testSubscription1() {
 		do {

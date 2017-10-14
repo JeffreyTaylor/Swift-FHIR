@@ -25,6 +25,10 @@ class PractitionerTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRPractitioner {
 		return try SwiftFHIRPractitioner(json: json)
 	}
+
+    func testResourceTypeIsPractitioner() {
+        XCTAssertEqual(Practitioner.resourceType, "Practitioner")
+    }
 	
 	func testPractitioner1() {
 		do {

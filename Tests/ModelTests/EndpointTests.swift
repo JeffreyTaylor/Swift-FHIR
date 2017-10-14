@@ -25,6 +25,10 @@ class EndpointTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIREndpoint {
 		return try SwiftFHIREndpoint(json: json)
 	}
+
+    func testResourceTypeIsEndpoint() {
+        XCTAssertEqual(Endpoint.resourceType, "Endpoint")
+    }
 	
 	func testEndpoint1() {
 		do {

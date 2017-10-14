@@ -25,6 +25,14 @@ class ProcedureRequestTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRProcedureRequest {
 		return try SwiftFHIRProcedureRequest(json: json)
 	}
+
+    func testResourceTypeIsProcedureRequest() {
+        XCTAssertEqual(ProcedureRequest.resourceType, "ProcedureRequest")
+    }
+
+    func testProcedureRequestRequesterResourceTypeIsProcedureRequestRequester() {
+        XCTAssertEqual(ProcedureRequestRequester.resourceType, "ProcedureRequestRequester")
+    }
 	
 	func testProcedureRequest1() {
 		do {

@@ -25,6 +25,10 @@ class BodySiteTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRBodySite {
 		return try SwiftFHIRBodySite(json: json)
 	}
+
+    func testResourceTypeIsBodySite() {
+        XCTAssertEqual(BodySite.resourceType, "BodySite")
+    }
 	
 	func testBodySite1() {
 		do {

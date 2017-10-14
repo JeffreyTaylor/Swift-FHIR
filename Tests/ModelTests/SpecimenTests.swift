@@ -25,6 +25,22 @@ class SpecimenTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRSpecimen {
 		return try SwiftFHIRSpecimen(json: json)
 	}
+
+    func testResourceTypeIsSpecimen() {
+        XCTAssertEqual(Specimen.resourceType, "Specimen")
+    }
+
+    func testSpecimenCollectionResourceTypeIsSpecimenCollection() {
+        XCTAssertEqual(SpecimenCollection.resourceType, "SpecimenCollection")
+    }
+
+    func testSpecimenContainerResourceTypeIsSpecimenContainer() {
+        XCTAssertEqual(SpecimenContainer.resourceType, "SpecimenContainer")
+    }
+
+    func testSSpecimenProcessingResourceTypeIsSpecimenProcessing() {
+        XCTAssertEqual(SpecimenProcessing.resourceType, "SpecimenProcessing")
+    }
 	
 	func testSpecimen1() {
 		do {

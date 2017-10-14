@@ -25,6 +25,10 @@ class EnrollmentResponseTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIREnrollmentResponse {
 		return try SwiftFHIREnrollmentResponse(json: json)
 	}
+
+    func testResourceTypeIsEnrollmentResponse() {
+        XCTAssertEqual(EnrollmentResponse.resourceType, "EnrollmentResponse")
+    }
 	
 	func testEnrollmentResponse1() {
 		do {

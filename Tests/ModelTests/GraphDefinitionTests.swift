@@ -25,6 +25,10 @@ class GraphDefinitionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRGraphDefinition {
 		return try SwiftFHIRGraphDefinition(json: json)
 	}
+
+    func testResourceTypeIsGraphDefinition() {
+        XCTAssertEqual(GraphDefinition.resourceType, "GraphDefinition")
+    }
 	
 	func testGraphDefinition1() {
 		do {

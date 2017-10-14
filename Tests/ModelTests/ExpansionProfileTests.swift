@@ -25,7 +25,39 @@ class ExpansionProfileTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRExpansionProfile {
 		return try SwiftFHIRExpansionProfile(json: json)
 	}
-	
+
+    func testResourceTypeIsExpansionProfile() {
+        XCTAssertEqual(ExpansionProfile.resourceType, "ExpansionProfile")
+    }
+
+    func testExpansionProfileDesignationResourceTypeIsExpansionProfileDesignation() {
+        XCTAssertEqual(ExpansionProfileDesignation.resourceType, "ExpansionProfileDesignation")
+    }
+
+    func testExpansionProfileDesignationExcludeResourceTypeIsExpansionProfileDesignationExclude() {
+        XCTAssertEqual(ExpansionProfileDesignationExclude.resourceType, "ExpansionProfileDesignationExclude")
+    }
+
+    func testExpansionProfileDesignationExcludeDesignationResourceTypeIsExpansionProfileDesignationExcludeDesignation() {
+        XCTAssertEqual(ExpansionProfileDesignationExcludeDesignation.resourceType, "ExpansionProfileDesignationExcludeDesignation")
+    }
+
+    func testExpansionProfileDesignationIncludeResourceTypeIsExpansionProfileDesignationInclude() {
+        XCTAssertEqual(ExpansionProfileDesignationInclude.resourceType, "ExpansionProfileDesignationInclude")
+    }
+
+    func testExpansionProfileDesignationIncludeDesignationResourceTypeIsExpansionProfileDesignationIncludeDesignation() {
+        XCTAssertEqual(ExpansionProfileDesignationIncludeDesignation.resourceType, "ExpansionProfileDesignationIncludeDesignation")
+    }
+
+    func testExpansionProfileExcludedSystemResourceTypeIsExpansionProfileExcludedSystem() {
+        XCTAssertEqual(ExpansionProfileExcludedSystem.resourceType, "ExpansionProfileExcludedSystem")
+    }
+
+    func testExpansionProfileFixedVersionResourceTypeIsExpansionProfileFixedVersion() {
+        XCTAssertEqual(ExpansionProfileFixedVersion.resourceType, "ExpansionProfileFixedVersion")
+    }
+
 	func testExpansionProfile1() {
 		do {
 			let instance = try runExpansionProfile1()

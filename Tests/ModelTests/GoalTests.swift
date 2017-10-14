@@ -25,6 +25,10 @@ class GoalTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRGoal {
 		return try SwiftFHIRGoal(json: json)
 	}
+
+    func testResourceTypeIsGoal() {
+        XCTAssertEqual(Goal.resourceType, "Goal")
+    }
 	
 	func testGoal1() {
 		do {

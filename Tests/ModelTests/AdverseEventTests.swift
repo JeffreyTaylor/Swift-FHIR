@@ -25,6 +25,10 @@ class AdverseEventTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRAdverseEvent {
 		return try SwiftFHIRAdverseEvent(json: json)
 	}
+
+    func testResourceTypeIsAdverseEvent() {
+        XCTAssertEqual(AdverseEvent.resourceType, "AdverseEvent")
+    }
 	
 	func testAdverseEvent1() {
 		do {

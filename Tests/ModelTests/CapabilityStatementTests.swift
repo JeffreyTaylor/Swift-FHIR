@@ -25,6 +25,10 @@ class CapabilityStatementTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRCapabilityStatement {
 		return try SwiftFHIRCapabilityStatement(json: json)
 	}
+
+    func testResourceTypeIsCapabilityStatement() {
+        XCTAssertEqual(CapabilityStatement.resourceType, "CapabilityStatement")
+    }
 	
 	func testCapabilityStatement1() {
 		do {

@@ -25,6 +25,10 @@ class CoverageTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRCoverage {
 		return try SwiftFHIRCoverage(json: json)
 	}
+
+    func testResourceTypeIsCoverage() {
+        XCTAssertEqual(Coverage.resourceType, "Coverage")
+    }
 	
 	func testCoverage1() {
 		do {

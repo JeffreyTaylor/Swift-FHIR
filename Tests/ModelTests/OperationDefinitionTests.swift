@@ -25,6 +25,22 @@ class OperationDefinitionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIROperationDefinition {
 		return try SwiftFHIROperationDefinition(json: json)
 	}
+
+    func testResourceTypeIsOperationDefinition() {
+        XCTAssertEqual(OperationDefinition.resourceType, "OperationDefinition")
+    }
+
+    func testOperationDefinitionOverloadResourceTypeIsOperationDefinitionOverload() {
+        XCTAssertEqual(OperationDefinitionOverload.resourceType, "OperationDefinitionOverload")
+    }
+
+    func testOperationDefinitionParameterResourceTypeIsOperationOperationDefinitionParameter() {
+        XCTAssertEqual(OperationDefinitionParameter.resourceType, "OperationDefinitionParameter")
+    }
+
+    func testOperationDefinitionParameterBindingResourceTypeIsOperationDefinitionParameterBinding() {
+        XCTAssertEqual(OperationDefinitionParameterBinding.resourceType, "OperationDefinitionParameterBinding")
+    }
 	
 	func testOperationDefinition1() {
 		do {

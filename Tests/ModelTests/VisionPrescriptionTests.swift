@@ -25,6 +25,10 @@ class VisionPrescriptionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRVisionPrescription {
 		return try SwiftFHIRVisionPrescription(json: json)
 	}
+
+    func testResourceTypeIsVisionPrescription() {
+        XCTAssertEqual(VisionPrescription.resourceType, "VisionPrescription")
+    }
 	
 	func testVisionPrescription1() {
 		do {

@@ -25,6 +25,10 @@ class ConceptMapTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRConceptMap {
 		return try SwiftFHIRConceptMap(json: json)
 	}
+
+    func testResourceTypeIsConceptMap() {
+        XCTAssertEqual(ConceptMap.resourceType, "ConceptMap")
+    }
 	
 	func testConceptMap1() {
 		do {

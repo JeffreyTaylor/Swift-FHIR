@@ -25,6 +25,14 @@ class DeviceMetricTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRDeviceMetric {
 		return try SwiftFHIRDeviceMetric(json: json)
 	}
+
+    func testResourceTypeIsDeviceMetric() {
+        XCTAssertEqual(DeviceMetric.resourceType, "DeviceMetric")
+    }
+
+    func testDeviceMetricCalibrationResourceTypeIsDeviceMetricCalibration() {
+        XCTAssertEqual(DeviceMetricCalibration.resourceType, "DeviceMetricCalibration")
+    }
 	
 	func testDeviceMetric1() {
 		do {

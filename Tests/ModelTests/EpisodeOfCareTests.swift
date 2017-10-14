@@ -25,6 +25,10 @@ class EpisodeOfCareTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIREpisodeOfCare {
 		return try SwiftFHIREpisodeOfCare(json: json)
 	}
+
+    func testResourceTypeIsEpisodeOfCare() {
+        XCTAssertEqual(EpisodeOfCare.resourceType, "EpisodeOfCare")
+    }
 	
 	func testEpisodeOfCare1() {
 		do {

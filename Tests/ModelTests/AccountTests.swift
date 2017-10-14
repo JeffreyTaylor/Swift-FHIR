@@ -25,6 +25,10 @@ class AccountTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRAccount {
 		return try SwiftFHIRAccount(json: json)
 	}
+
+    func testResourceTypeIsAccount() {
+        XCTAssertEqual(Account.resourceType, "Account")
+    }
 	
 	func testAccount1() {
 		do {

@@ -25,6 +25,14 @@ class ResearchStudyTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRResearchStudy {
 		return try SwiftFHIRResearchStudy(json: json)
 	}
+
+    func testResourceTypeIsResearchStudy() {
+        XCTAssertEqual(ResearchStudy.resourceType, "ResearchStudy")
+    }
+
+    func testResearchStudyArmResourceTypeIsResearchStudyArm() {
+        XCTAssertEqual(ResearchStudyArm.resourceType, "ResearchStudyArm")
+    }
 	
 	func testResearchStudy1() {
 		do {

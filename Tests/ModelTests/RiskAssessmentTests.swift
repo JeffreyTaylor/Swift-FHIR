@@ -25,6 +25,10 @@ class RiskAssessmentTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRRiskAssessment {
 		return try SwiftFHIRRiskAssessment(json: json)
 	}
+
+    func testResourceTypeIsRiskAssessment() {
+        XCTAssertEqual(RiskAssessment.resourceType, "RiskAssessment")
+    }
 	
 	func testRiskAssessment1() {
 		do {

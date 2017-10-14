@@ -25,6 +25,10 @@ class TestScriptTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRTestScript {
 		return try SwiftFHIRTestScript(json: json)
 	}
+
+    func testResourceTypeIsTestScript() {
+        XCTAssertEqual(TestScript.resourceType, "TestScript")
+    }
 	
 	func testTestScript1() {
 		do {

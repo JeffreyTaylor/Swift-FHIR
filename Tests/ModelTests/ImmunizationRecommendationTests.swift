@@ -25,6 +25,10 @@ class ImmunizationRecommendationTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRImmunizationRecommendation {
 		return try SwiftFHIRImmunizationRecommendation(json: json)
 	}
+
+    func testResourceTypeIsImmunizationRecommendation() {
+        XCTAssertEqual(ImmunizationRecommendation.resourceType, "ImmunizationRecommendation")
+    }
 	
 	func testImmunizationRecommendation1() {
 		do {

@@ -25,6 +25,10 @@ class SlotTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRSlot {
 		return try SwiftFHIRSlot(json: json)
 	}
+
+    func testResourceTypeIsSlot() {
+        XCTAssertEqual(Slot.resourceType, "Slot")
+    }
 	
 	func testSlot1() {
 		do {

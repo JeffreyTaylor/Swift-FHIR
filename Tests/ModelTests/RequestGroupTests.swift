@@ -25,6 +25,10 @@ class RequestGroupTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRRequestGroup {
 		return try SwiftFHIRRequestGroup(json: json)
 	}
+
+    func testResourceTypeIsRequestGroup() {
+        XCTAssertEqual(RequestGroup.resourceType, "RequestGroup")
+    }
 	
 	func testRequestGroup1() {
 		do {

@@ -25,6 +25,10 @@ class SequenceTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRSequence {
 		return try SwiftFHIRSequence(json: json)
 	}
+
+    func testResourceTypeIsSequence() {
+        XCTAssertEqual(Sequence.resourceType, "Sequence")
+    }
 	
 	func testSequence1() {
 		do {

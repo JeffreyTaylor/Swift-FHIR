@@ -25,6 +25,10 @@ class ActivityDefinitionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRActivityDefinition {
 		return try SwiftFHIRActivityDefinition(json: json)
 	}
+
+    func testResourceTypeIsActivityDefinition() {
+        XCTAssertEqual(ActivityDefinition.resourceType, "ActivityDefinition")
+    }
 	
 	func testActivityDefinition1() {
 		do {

@@ -25,6 +25,18 @@ class PaymentReconciliationTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRPaymentReconciliation {
 		return try SwiftFHIRPaymentReconciliation(json: json)
 	}
+
+    func testResourceTypeIsPaymentReconciliation() {
+        XCTAssertEqual(PaymentReconciliation.resourceType, "PaymentReconciliation")
+    }
+
+    func testPaymentReconciliationDetailResourceTypeIsPaymentReconciliationDetail() {
+        XCTAssertEqual(PaymentReconciliationDetail.resourceType, "PaymentReconciliation")
+    }
+
+    func testPaymentReconciliationProcessNoteResourceTypeIsPaymentReconciliationProcessNote() {
+        XCTAssertEqual(PaymentReconciliationProcessNote.resourceType, "PaymentReconciliation")
+    }
 	
 	func testPaymentReconciliation1() {
 		do {

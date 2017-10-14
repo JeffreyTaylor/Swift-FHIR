@@ -25,6 +25,30 @@ class BundleTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRBundle {
 		return try SwiftFHIRBundle(json: json)
 	}
+
+    func testResourceTypeIsBundle() {
+        XCTAssertEqual(Bundle.resourceType, "Bundle")
+    }
+
+    func testBundleEntryResourceTypeIsBundleEntry() {
+        XCTAssertEqual(BundleEntry.resourceType, "BundleEntry")
+    }
+
+    func testBundleEntryRequestResourceTypeIsBundleEntryRequest() {
+        XCTAssertEqual(BundleEntryRequest.resourceType, "BundleEntryRequest")
+    }
+
+    func testBundleEntryResponseResourceTypeIsBundleEntryResponse() {
+        XCTAssertEqual(BundleEntryResponse.resourceType, "BundleEntryResponse")
+    }
+
+    func testBundleEntrySearchResourceTypeIsBundleEntrySearch() {
+        XCTAssertEqual(BundleEntrySearch.resourceType, "BundleEntrySearch")
+    }
+
+    func testBundleLinkResourceTypeIsBundleLink() {
+        XCTAssertEqual(BundleLink.resourceType, "BundleLink")
+    }
 	
 	func testBundle1() {
 		do {

@@ -25,6 +25,10 @@ class ClaimResponseTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRClaimResponse {
 		return try SwiftFHIRClaimResponse(json: json)
 	}
+
+    func testResourceTypeIsClaimResponse() {
+        XCTAssertEqual(ClaimResponse.resourceType, "ClaimResponse")
+    }
 	
 	func testClaimResponse1() {
 		do {

@@ -25,6 +25,10 @@ class FlagTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRFlag {
 		return try SwiftFHIRFlag(json: json)
 	}
+
+    func testResourceTypeIsFlag() {
+        XCTAssertEqual(Flag.resourceType, "Flag")
+    }
 	
 	func testFlag1() {
 		do {

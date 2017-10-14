@@ -25,6 +25,14 @@ class QuestionnaireResponseTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRQuestionnaireResponse {
 		return try SwiftFHIRQuestionnaireResponse(json: json)
 	}
+
+    func testResourceTypeIsQuestionnaireResponse() {
+        XCTAssertEqual(QuestionnaireResponse.resourceType, "QuestionnaireResponse")
+    }
+
+    func testQuestionnaireResponseItemAnswerResourceTypeIsQuestionnaireResponseItemAnswer() {
+        XCTAssertEqual(QuestionnaireResponseItemAnswer.resourceType, "QuestionnaireResponseItemAnswer")
+    }
 	
 	func testQuestionnaireResponse1() {
 		do {

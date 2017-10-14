@@ -25,6 +25,14 @@ class FamilyMemberHistoryTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRFamilyMemberHistory {
 		return try SwiftFHIRFamilyMemberHistory(json: json)
 	}
+
+    func testResourceTypeIsFamilyMemberHistory() {
+        XCTAssertEqual(FamilyMemberHistory.resourceType, "FamilyMemberHistory")
+    }
+
+    func testFamilyMemberHistoryConditionResourceTypeIsFamilyMemberHistoryCondition() {
+        XCTAssertEqual(FamilyMemberHistoryCondition.resourceType, "FamilyMemberHistoryCondition")
+    }
 	
 	func testFamilyMemberHistory1() {
 		do {

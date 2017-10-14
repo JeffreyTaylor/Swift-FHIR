@@ -25,6 +25,10 @@ class MediaTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRMedia {
 		return try SwiftFHIRMedia(json: json)
 	}
+
+    func testResourceTypeIsMedia() {
+        XCTAssertEqual(Media.resourceType, "Media")
+    }
 	
 	func testMedia1() {
 		do {

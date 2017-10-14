@@ -25,6 +25,14 @@ class LinkageTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRLinkage {
 		return try SwiftFHIRLinkage(json: json)
 	}
+
+    func testResourceTypeIsLinkage() {
+        XCTAssertEqual(Linkage.resourceType, "Linkage")
+    }
+
+    func testLinkageItemResourceTypeIsLinkageItem() {
+        XCTAssertEqual(LinkageItem.resourceType, "Linkage")
+    }
 	
 	func testLinkage1() {
 		do {

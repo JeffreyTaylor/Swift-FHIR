@@ -25,6 +25,10 @@ class DiagnosticReportTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRDiagnosticReport {
 		return try SwiftFHIRDiagnosticReport(json: json)
 	}
+
+    func testResourceTypeIsDiagnosticReport() {
+        XCTAssertEqual(DiagnosticReport.resourceType, "DiagnosticReport")
+    }
 	
 	func testDiagnosticReport1() {
 		do {

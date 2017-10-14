@@ -25,6 +25,14 @@ class ReferralRequestTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRReferralRequest {
 		return try SwiftFHIRReferralRequest(json: json)
 	}
+
+    func testResourceTypeIsReferralRequest() {
+        XCTAssertEqual(ReferralRequest.resourceType, "ReferralRequest")
+    }
+
+    func testReferralRequestRequesterResourceTypeIsReferralRequestRequester() {
+        XCTAssertEqual(ReferralRequestRequester.resourceType, "ReferralRequestRequester")
+    }
 	
 	func testReferralRequest1() {
 		do {

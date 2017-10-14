@@ -25,6 +25,10 @@ class AppointmentResponseTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRAppointmentResponse {
 		return try SwiftFHIRAppointmentResponse(json: json)
 	}
+
+    func testResourceTypeIsAppointmentResponse() {
+        XCTAssertEqual(AppointmentResponse.resourceType, "AppointmentResponse")
+    }
 	
 	func testAppointmentResponse1() {
 		do {

@@ -25,6 +25,10 @@ class ListTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRList {
 		return try SwiftFHIRList(json: json)
 	}
+
+    func testResourceTypeIsList() {
+        XCTAssertEqual(List.resourceType, "List")
+    }
 	
 	func testList1() {
 		do {

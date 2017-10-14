@@ -25,6 +25,22 @@ class MessageHeaderTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRMessageHeader {
 		return try SwiftFHIRMessageHeader(json: json)
 	}
+
+    func testResourceTypeIsMessageHeader() {
+        XCTAssertEqual(MessageHeader.resourceType, "MessageHeader")
+    }
+
+    func testMessageHeaderDestinationResourceTypeIsMessageHeaderDestination() {
+        XCTAssertEqual(MessageHeaderDestination.resourceType, "MessageHeaderDestination")
+    }
+
+    func testMessageHeaderResponseResourceTypeIsMessageHeaderResponse() {
+        XCTAssertEqual(MessageHeaderResponse.resourceType, "MessageHeaderResponse")
+    }
+
+    func testMessageHeaderSourceResourceTypeIsMessageHeaderSource() {
+        XCTAssertEqual(MessageHeaderSource.resourceType, "MessageHeaderSource")
+    }
 	
 	func testMessageHeader1() {
 		do {

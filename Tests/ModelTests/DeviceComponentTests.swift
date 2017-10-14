@@ -25,6 +25,14 @@ class DeviceComponentTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRDeviceComponent {
 		return try SwiftFHIRDeviceComponent(json: json)
 	}
+
+    func testResourceTypeIsDeviceComponent() {
+        XCTAssertEqual(DeviceComponent.resourceType, "DeviceComponent")
+    }
+
+    func testDeviceComponentProductionSpecificationResourceTypeIsDeviceComponentProductionSpecification() {
+        XCTAssertEqual(DeviceComponentProductionSpecification.resourceType, "DeviceComponentProductionSpecification")
+    }
 	
 	func testDeviceComponent1() {
 		do {

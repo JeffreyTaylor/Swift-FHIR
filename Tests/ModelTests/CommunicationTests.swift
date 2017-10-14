@@ -25,6 +25,14 @@ class CommunicationTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRCommunication {
 		return try SwiftFHIRCommunication(json: json)
 	}
+
+    func testResourceTypeIsCommunication() {
+        XCTAssertEqual(Communication.resourceType, "Communication")
+    }
+
+    func testCommunicationPayloadResourceTypeIsCommunicationPayload() {
+        XCTAssertEqual(CommunicationPayload.resourceType, "CommunicationPayload")
+    }
 	
 	func testCommunication1() {
 		do {

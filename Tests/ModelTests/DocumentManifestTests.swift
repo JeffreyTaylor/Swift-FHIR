@@ -25,7 +25,19 @@ class DocumentManifestTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRDocumentManifest {
 		return try SwiftFHIRDocumentManifest(json: json)
 	}
-	
+
+    func testResourceTypeIsDocumentManifest() {
+        XCTAssertEqual(DocumentManifest.resourceType, "DocumentManifest")
+    }
+    
+    func testDocumentManifestContentResourceTypeIsDocumentManifestContent() {
+        XCTAssertEqual(DocumentManifestContent.resourceType, "DocumentManifestContent")
+    }
+
+    func testDocumentManifestRelatedContentResourceTypeIsDocumentManifestRelated() {
+        XCTAssertEqual(DocumentManifestRelated.resourceType, "DocumentManifestRelated")
+    }
+
 	func testDocumentManifest1() {
 		do {
 			let instance = try runDocumentManifest1()

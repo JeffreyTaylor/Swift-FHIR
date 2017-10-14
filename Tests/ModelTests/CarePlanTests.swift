@@ -25,7 +25,19 @@ class CarePlanTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRCarePlan {
 		return try SwiftFHIRCarePlan(json: json)
 	}
-	
+
+    func testResourceTypeIsCarePlan() {
+        XCTAssertEqual(CarePlan.resourceType, "CarePlan")
+    }
+
+    func testCarePlanActivityResourceTypeIsCarePlanActivity() {
+        XCTAssertEqual(CarePlanActivity.resourceType, "CarePlanActivity")
+    }
+
+    func testCarePlanActivityDetailResourceTypeIsCarePlanActivityDetail() {
+        XCTAssertEqual(CarePlanActivityDetail.resourceType, "CarePlanActivityDetail")
+    }
+
 	func testCarePlan1() {
 		do {
 			let instance = try runCarePlan1()

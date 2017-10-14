@@ -25,6 +25,10 @@ class MessageDefinitionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRMessageDefinition {
 		return try SwiftFHIRMessageDefinition(json: json)
 	}
+
+    func testResourceTypeIsMessageDefinition() {
+        XCTAssertEqual(MessageDefinition.resourceType, "MessageDefinition")
+    }
 	
 	func testMessageDefinition1() {
 		do {

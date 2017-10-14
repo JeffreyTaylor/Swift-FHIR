@@ -25,6 +25,10 @@ class LocationTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRLocation {
 		return try SwiftFHIRLocation(json: json)
 	}
+
+    func testResourceTypeIsLocation() {
+        XCTAssertEqual(Location.resourceType, "Location")
+    }
 	
 	func testLocation1() {
 		do {

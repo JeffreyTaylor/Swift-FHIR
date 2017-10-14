@@ -25,6 +25,10 @@ class PlanDefinitionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRPlanDefinition {
 		return try SwiftFHIRPlanDefinition(json: json)
 	}
+
+    func testResourceTypeIsPlanDefinition() {
+        XCTAssertEqual(PlanDefinition.resourceType, "PlanDefinition")
+    }
 	
 	func testPlanDefinition1() {
 		do {

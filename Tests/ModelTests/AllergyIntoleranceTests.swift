@@ -25,6 +25,10 @@ class AllergyIntoleranceTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRAllergyIntolerance {
 		return try SwiftFHIRAllergyIntolerance(json: json)
 	}
+
+    func testResourceTypeIsAllergyIntolerance() {
+        XCTAssertEqual(AllergyIntolerance.resourceType, "AllergyIntolerance")
+    }
 	
 	func testAllergyIntolerance1() {
 		do {

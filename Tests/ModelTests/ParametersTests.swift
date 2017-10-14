@@ -25,6 +25,10 @@ class ParametersTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRParameters {
 		return try SwiftFHIRParameters(json: json)
 	}
+
+    func testResourceTypeIsParameters() {
+        XCTAssertEqual(Parameters.resourceType, "Parameters")
+    }
 	
 	func testParameters1() {
 		do {

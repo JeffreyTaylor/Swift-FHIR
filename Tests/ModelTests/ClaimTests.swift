@@ -25,7 +25,55 @@ class ClaimTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRClaim {
 		return try SwiftFHIRClaim(json: json)
 	}
-	
+
+    func testResourceTypeIsClaim() {
+        XCTAssertEqual(Claim.resourceType, "Claim")
+    }
+
+    func testClaimAccidentResourceTypeIsClaimAccident() {
+        XCTAssertEqual(ClaimAccident.resourceType, "ClaimAccident")
+    }
+
+    func testClaimCareTeamResourceTypeIsClaimCareTeam() {
+        XCTAssertEqual(ClaimCareTeam.resourceType, "ClaimCareTeam")
+    }
+
+    func testClaimDiagnosisResourceTypeIsClaimDiagnosis() {
+        XCTAssertEqual(ClaimCareTeam.resourceType, "ClaimCareTeam")
+    }
+
+    func testClaimInformationResourceTypeIsClaimInformation() {
+        XCTAssertEqual(ClaimInformation.resourceType, "ClaimInformation")
+    }
+
+    func testClaimInsuranceResourceTypeIsClaimInsurance() {
+        XCTAssertEqual(ClaimInsurance.resourceType, "ClaimInsurance")
+    }
+
+    func testClaimItemResourceTypeIsClaimItem() {
+        XCTAssertEqual(ClaimItem.resourceType, "ClaimItem")
+    }
+
+    func testClaimItemDetailResourceTypeIsClaimItemDetail() {
+        XCTAssertEqual(ClaimItemDetail.resourceType, "ClaimItemDetail")
+    }
+
+    func testClaimItemDetailSubDetailResourceTypeIsClaimItemDetailSubDetail() {
+        XCTAssertEqual(ClaimItemDetailSubDetail.resourceType, "ClaimItemDetailSubDetail")
+    }
+
+    func testClaimPayeeResourceTypeIsClaimPayee() {
+        XCTAssertEqual(ClaimPayee.resourceType, "ClaimPayee")
+    }
+
+    func testClaimProcedureResourceTypeIsClaimProcedure() {
+        XCTAssertEqual(ClaimProcedure.resourceType, "ClaimProcedure")
+    }
+
+    func testClaimRelatedResourceTypeIsClaimRelated() {
+        XCTAssertEqual(ClaimRelated.resourceType, "ClaimRelated")
+    }
+
 	func testClaim1() {
 		do {
 			let instance = try runClaim1()

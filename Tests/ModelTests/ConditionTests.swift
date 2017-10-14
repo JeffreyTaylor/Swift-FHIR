@@ -25,6 +25,18 @@ class ConditionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRCondition {
 		return try SwiftFHIRCondition(json: json)
 	}
+
+    func testResourceTypeIsCondition() {
+        XCTAssertEqual(Condition.resourceType, "Condition")
+    }
+
+    func testConditionEvidenceResourceTypeIsConditionEvidence() {
+        XCTAssertEqual(ConditionEvidence.resourceType, "ConditionEvidence")
+    }
+
+    func testConditionStageResourceTypeIsConditionStage() {
+        XCTAssertEqual(ConditionStage.resourceType, "ConditionStage")
+    }
 	
 	func testCondition1() {
 		do {

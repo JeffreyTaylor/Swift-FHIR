@@ -25,6 +25,14 @@ class CareTeamTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRCareTeam {
 		return try SwiftFHIRCareTeam(json: json)
 	}
+
+    func testResourceTypeIsCareTeam() {
+        XCTAssertEqual(CareTeam.resourceType, "CareTeam")
+    }
+
+    func testCareTeamParticipantResourceTypeIsCareTeamParticipant() {
+        XCTAssertEqual(CareTeamParticipant.resourceType, "CareTeamParticipant")
+    }
 	
 	func testCareTeam1() {
 		do {

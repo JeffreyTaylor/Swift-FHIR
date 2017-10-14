@@ -25,6 +25,18 @@ class SubstanceTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRSubstance {
 		return try SwiftFHIRSubstance(json: json)
 	}
+
+    func testResourceTypeIsSubstance() {
+        XCTAssertEqual(Substance.resourceType, "Substance")
+    }
+
+    func testSubstanceIngredientResourceTypeIsSubstanceIngredient() {
+        XCTAssertEqual(SubstanceIngredient.resourceType, "SubstanceIngredient")
+    }
+
+    func testSubstanceInstanceResourceTypeIsSubstanceInstance() {
+        XCTAssertEqual(SubstanceInstance.resourceType, "SubstanceInstance")
+    }
 	
 	func testSubstance1() {
 		do {

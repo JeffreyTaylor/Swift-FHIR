@@ -25,6 +25,10 @@ class StructureMapTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRStructureMap {
 		return try SwiftFHIRStructureMap(json: json)
 	}
+
+    func testResourceTypeIsStructureMap() {
+        XCTAssertEqual(StructureMap.resourceType, "StructureMap")
+    }
 	
 	func testStructureMap1() {
 		do {

@@ -25,6 +25,10 @@ class ImagingStudyTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRImagingStudy {
 		return try SwiftFHIRImagingStudy(json: json)
 	}
+
+    func testResourceTypeIsImagingStudy() {
+        XCTAssertEqual(ImagingStudy.resourceType, "ImagingStudy")
+    }
 	
 	func testImagingStudy1() {
 		do {

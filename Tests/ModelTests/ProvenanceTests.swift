@@ -25,6 +25,18 @@ class ProvenanceTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRProvenance {
 		return try SwiftFHIRProvenance(json: json)
 	}
+
+    func testResourceTypeIsProvenance() {
+        XCTAssertEqual(Provenance.resourceType, "Provenance")
+    }
+
+    func testProvenanceAgentResourceTypeIsProvenanceAgent() {
+        XCTAssertEqual(ProvenanceAgent.resourceType, "ProvenanceAgent")
+    }
+
+    func testProvenanceEntityResourceTypeIsProvenanceEntity() {
+        XCTAssertEqual(ProvenanceEntity.resourceType, "ProvenanceEntity")
+    }
 	
 	func testProvenance1() {
 		do {

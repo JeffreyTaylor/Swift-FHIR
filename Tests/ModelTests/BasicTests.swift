@@ -25,6 +25,10 @@ class BasicTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRBasic {
 		return try SwiftFHIRBasic(json: json)
 	}
+
+    func testResourceTypeIsBasic() {
+        XCTAssertEqual(Basic.resourceType, "Basic")
+    }
 	
 	func testBasic1() {
 		do {

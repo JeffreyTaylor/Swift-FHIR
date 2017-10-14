@@ -25,6 +25,10 @@ class ConsentTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRConsent {
 		return try SwiftFHIRConsent(json: json)
 	}
+
+    func testResourceTypeIsConsent() {
+        XCTAssertEqual(Consent.resourceType, "Consent")
+    }
 	
 	func testConsent1() {
 		do {

@@ -25,6 +25,22 @@ class NutritionOrderTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRNutritionOrder {
 		return try SwiftFHIRNutritionOrder(json: json)
 	}
+
+    func testResourceTypeIsNutritionOrder() {
+        XCTAssertEqual(NutritionOrder.resourceType, "NutritionOrder")
+    }
+
+    func testNutritionOrderEnteralFormulaResourceTypeIsNutritionOrderEnteralFormula() {
+        XCTAssertEqual(NutritionOrderEnteralFormula.resourceType, "NutritionOrderEnteralFormula")
+    }
+
+    func testNutritionOrderEnteralFormulaAdministrationResourceTypeIsNutritionOrderEnteralFormulaAdministration() {
+        XCTAssertEqual(NutritionOrderEnteralFormulaAdministration.resourceType, "NutritionOrderEnteralFormulaAdministration")
+    }
+
+    func testNutritionOrderOralDietResourceTypeIsNutritionOrderOralDiet() {
+        XCTAssertEqual(NutritionOrderOralDiet.resourceType, "NutritionOrderOralDiet")
+    }
 	
 	func testNutritionOrder1() {
 		do {

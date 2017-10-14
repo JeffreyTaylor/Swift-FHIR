@@ -25,6 +25,10 @@ class PersonTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRPerson {
 		return try SwiftFHIRPerson(json: json)
 	}
+
+    func testResourceTypeIsPerson() {
+        XCTAssertEqual(Person.resourceType, "Person")
+    }
 	
 	func testPerson1() {
 		do {

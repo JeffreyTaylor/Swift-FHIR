@@ -25,6 +25,10 @@ class BinaryTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRBinary {
 		return try SwiftFHIRBinary(json: json)
 	}
+
+    func testResourceTypeIsBinary() {
+        XCTAssertEqual(Binary.resourceType, "Binary")
+    }
 	
 	func testBinary1() {
 		do {

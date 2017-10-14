@@ -25,6 +25,10 @@ class GuidanceResponseTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRGuidanceResponse {
 		return try SwiftFHIRGuidanceResponse(json: json)
 	}
+
+    func testResourceTypeIsGuidanceResponse() {
+        XCTAssertEqual(GuidanceResponse.resourceType, "GuidanceResponse")
+    }
 	
 	func testGuidanceResponse1() {
 		do {

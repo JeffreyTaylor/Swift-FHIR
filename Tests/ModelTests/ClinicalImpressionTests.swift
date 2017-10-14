@@ -25,7 +25,19 @@ class ClinicalImpressionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRClinicalImpression {
 		return try SwiftFHIRClinicalImpression(json: json)
 	}
-	
+
+    func testResourceTypeIsClinicalImpression() {
+        XCTAssertEqual(ClinicalImpression.resourceType, "ClinicalImpression")
+    }
+
+    func testClinicalImpressionFindingResourceTypeIsClinicalImpressionFinding() {
+        XCTAssertEqual(ClinicalImpressionFinding.resourceType, "ClinicalImpressionFinding")
+    }
+
+    func testClinicalImpressionInvestigationResourceTypeIsClinicalImpressionInvestigation() {
+        XCTAssertEqual(ClinicalImpressionInvestigation.resourceType, "ClinicalImpressionInvestigation")
+    }
+
 	func testClinicalImpression1() {
 		do {
 			let instance = try runClinicalImpression1()

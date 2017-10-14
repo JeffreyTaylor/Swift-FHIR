@@ -25,6 +25,10 @@ class ValueSetTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRValueSet {
 		return try SwiftFHIRValueSet(json: json)
 	}
+
+    func testResourceTypeIsValueSet() {
+        XCTAssertEqual(ValueSet.resourceType, "ValueSet")
+    }
 	
 	func testValueSet1() {
 		do {

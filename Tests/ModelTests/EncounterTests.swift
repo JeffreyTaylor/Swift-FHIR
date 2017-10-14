@@ -25,6 +25,10 @@ class EncounterTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIREncounter {
 		return try SwiftFHIREncounter(json: json)
 	}
+
+    func testResourceTypeIsEncounter() {
+        XCTAssertEqual(Encounter.resourceType, "Encounter")
+    }
 	
 	func testEncounter1() {
 		do {

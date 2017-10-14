@@ -25,6 +25,10 @@ class DocumentReferenceTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRDocumentReference {
 		return try SwiftFHIRDocumentReference(json: json)
 	}
+
+    func testResourceTypeIsDocumentReference() {
+        XCTAssertEqual(DocumentReference.resourceType, "DocumentReference")
+    }
 	
 	func testDocumentReference1() {
 		do {

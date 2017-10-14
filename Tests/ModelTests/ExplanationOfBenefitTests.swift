@@ -25,6 +25,10 @@ class ExplanationOfBenefitTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRExplanationOfBenefit {
 		return try SwiftFHIRExplanationOfBenefit(json: json)
 	}
+
+    func testResourceTypeIsExplanationOfBenefit() {
+        XCTAssertEqual(ExplanationOfBenefit.resourceType, "ExplanationOfBenefit")
+    }
 	
 	func testExplanationOfBenefit1() {
 		do {

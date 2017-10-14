@@ -25,6 +25,10 @@ class AuditEventTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRAuditEvent {
 		return try SwiftFHIRAuditEvent(json: json)
 	}
+
+    func testResourceTypeIsAuditEvent() {
+        XCTAssertEqual(AuditEvent.resourceType, "AuditEvent")
+    }
 	
 	func testAuditEvent1() {
 		do {

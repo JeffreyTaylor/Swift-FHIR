@@ -25,6 +25,10 @@ class CompositionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRComposition {
 		return try SwiftFHIRComposition(json: json)
 	}
+
+    func testResourceTypeIsComposition() {
+        XCTAssertEqual(Composition.resourceType, "Composition")
+    }
 	
 	func testComposition1() {
 		do {

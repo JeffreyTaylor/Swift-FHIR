@@ -25,6 +25,10 @@ class TaskTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRTask {
 		return try SwiftFHIRTask(json: json)
 	}
+
+    func testResourceTypeIsTask() {
+        XCTAssertEqual(Task.resourceType, "Task")
+    }
 	
 	func testTask1() {
 		do {

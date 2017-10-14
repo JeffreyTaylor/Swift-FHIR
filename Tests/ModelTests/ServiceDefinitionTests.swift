@@ -25,6 +25,10 @@ class ServiceDefinitionTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRServiceDefinition {
 		return try SwiftFHIRServiceDefinition(json: json)
 	}
+
+    func testResourceTypeIsServiceDefinition() {
+        XCTAssertEqual(ServiceDefinition.resourceType, "ServiceDefinition")
+    }
 	
 	func testServiceDefinition1() {
 		do {

@@ -25,6 +25,22 @@ class ImagingManifestTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRImagingManifest {
 		return try SwiftFHIRImagingManifest(json: json)
 	}
+
+    func testResourceTypeIsImagingManifest() {
+        XCTAssertEqual(ImagingManifest.resourceType, "ImagingManifest")
+    }
+
+    func testImagingManifestStudyResourceTypeIsImagingManifestStudy() {
+        XCTAssertEqual(ImagingManifestStudy.resourceType, "ImagingManifestStudy")
+    }
+
+    func testImagingManifestStudySeriesResourceTypeIsImagingManifestStudySeries() {
+        XCTAssertEqual(ImagingManifestStudySeries.resourceType, "ImagingManifestStudySeries")
+    }
+
+    func testImagingManifestStudySeriesInstanceResourceTypeIsImagingManifestStudySeriesInstance() {
+        XCTAssertEqual(ImagingManifestStudySeriesInstance.resourceType, "ImagingManifestStudySeriesInstance")
+    }
 	
 	func testImagingManifest1() {
 		do {

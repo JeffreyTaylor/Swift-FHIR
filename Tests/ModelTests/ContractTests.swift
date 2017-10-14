@@ -25,6 +25,10 @@ class ContractTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRContract {
 		return try SwiftFHIRContract(json: json)
 	}
+
+    func testResourceTypeIsContract() {
+        XCTAssertEqual(Contract.resourceType, "Contract")
+    }
 	
 	func testContract1() {
 		do {

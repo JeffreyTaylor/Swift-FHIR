@@ -25,6 +25,14 @@ class OrganizationTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIROrganization {
 		return try SwiftFHIROrganization(json: json)
 	}
+
+    func testResourceTypeIsOrganization() {
+        XCTAssertEqual(Organization.resourceType, "Organization")
+    }
+
+    func testOrganizationContactResourceTypeIsOrganizationContact() {
+        XCTAssertEqual(OrganizationContact.resourceType, "Organization")
+    }
 	
 	func testOrganization1() {
 		do {

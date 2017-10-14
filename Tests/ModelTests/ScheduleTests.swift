@@ -25,6 +25,10 @@ class ScheduleTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRSchedule {
 		return try SwiftFHIRSchedule(json: json)
 	}
+
+    func testResourceTypeIsSchedule() {
+        XCTAssertEqual(Schedule.resourceType, "Schedule")
+    }
 	
 	func testSchedule1() {
 		do {

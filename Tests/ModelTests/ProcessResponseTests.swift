@@ -25,6 +25,14 @@ class ProcessResponseTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRProcessResponse {
 		return try SwiftFHIRProcessResponse(json: json)
 	}
+
+    func testResourceTypeIsProcessResponse() {
+        XCTAssertEqual(ProcessResponse.resourceType, "ProcessResponse")
+    }
+
+    func testProcessResponseProcessNoteResourceTypeIsProcessResponseProcessNote() {
+        XCTAssertEqual(ProcessResponseProcessNote.resourceType, "ProcessResponseProcessNote")
+    }
 	
 	func testProcessResponse1() {
 		do {

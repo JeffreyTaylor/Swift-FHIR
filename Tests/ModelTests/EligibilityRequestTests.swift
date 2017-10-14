@@ -25,6 +25,10 @@ class EligibilityRequestTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIREligibilityRequest {
 		return try SwiftFHIREligibilityRequest(json: json)
 	}
+
+    func testResourceTypeIsEligibilityRequest() {
+        XCTAssertEqual(EligibilityRequest.resourceType, "EligibilityRequest")
+    }
 	
 	func testEligibilityRequest1() {
 		do {

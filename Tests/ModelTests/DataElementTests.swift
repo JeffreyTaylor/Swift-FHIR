@@ -25,6 +25,10 @@ class DataElementTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRDataElement {
 		return try SwiftFHIRDataElement(json: json)
 	}
+
+    func testResourceTypeIsDataElement() {
+        XCTAssertEqual(DataElement.resourceType, "DataElement")
+    }
 	
 	func testDataElement1() {
 		do {

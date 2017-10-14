@@ -25,6 +25,10 @@ class CodeSystemTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRCodeSystem {
 		return try SwiftFHIRCodeSystem(json: json)
 	}
+
+    func testResourceTypeIsCodeSystem() {
+        XCTAssertEqual(CodeSystem.resourceType, "CodeSystem")
+    }
 	
 	func testCodeSystem1() {
 		do {

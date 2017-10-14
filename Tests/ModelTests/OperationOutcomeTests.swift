@@ -25,6 +25,14 @@ class OperationOutcomeTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIROperationOutcome {
 		return try SwiftFHIROperationOutcome(json: json)
 	}
+
+    func testResourceTypeIsOperationOutcome() {
+        XCTAssertEqual(OperationOutcome.resourceType, "OperationOutcome")
+    }
+
+    func testOperationOutcomeIssueResourceTypeIsOperationOutcomeIssue() {
+        XCTAssertEqual(OperationOutcomeIssue.resourceType, "OperationOutcomeIssue")
+    }
 	
 	func testOperationOutcome1() {
 		do {

@@ -25,6 +25,10 @@ class ImplementationGuideTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRImplementationGuide {
 		return try SwiftFHIRImplementationGuide(json: json)
 	}
+
+    func testResourceTypeIsImplementationGuide() {
+        XCTAssertEqual(ImplementationGuide.resourceType, "ImplementationGuide")
+    }
 	
 	func testImplementationGuide1() {
 		do {

@@ -25,6 +25,10 @@ class MeasureTests: XCTestCase {
 	func instantiateFrom(json: FHIRJSON) throws -> SwiftFHIRMeasure {
 		return try SwiftFHIRMeasure(json: json)
 	}
+
+    func testResourceTypeIsMeasure() {
+        XCTAssertEqual(Measure.resourceType, "Measure")
+    }
 	
 	func testMeasure1() {
 		do {
